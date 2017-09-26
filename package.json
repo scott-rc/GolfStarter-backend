@@ -8,7 +8,7 @@
   },
   "main": "src/server.js",
   "scripts": {
-    "start": "node build/golfstarters-server.js",
+    "start": "node dist/golfstarters-server.js",
     "build": "cross-env NODE_ENV=production webpack --progress --colors --hide-modules",
     "start:dev": "nodemon -w ./build build/golfstarters-server.js",
     "build:dev": "cross-env NODE_ENV=development webpack --progress --colors -w",
