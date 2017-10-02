@@ -1,10 +1,35 @@
-# GolfStarter-BackEnd
+# Golf Starter Backend
 
-Welcome Production 5!
+## Documentation
 
-Below I've laid out the instructions to get our backend up and running.
+### Express
 
-## Required Software
+Express is the framework we are using for our backend server. It handles HTTP requests and responses. This is how we communicate with the frontend.
+
+* [Express](http://expressjs.com/en/4x/api.html)
+  * [Routing](http://expressjs.com/en/guide/routing.html)
+  * [Writing Middleware](http://expressjs.com/en/guide/writing-middleware.html)
+  * [Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
+  * [Error Handling](http://expressjs.com/en/guide/error-handling.html)
+
+### JSON
+
+JSON is the format that we use to send and receive messages from our frontend.
+
+* [JSON](https://www.w3schools.com/js/js_json_intro.asp)
+  * [Syntax](https://www.w3schools.com/js/js_json_syntax.asp)
+
+### MongoDB
+
+The MongoDB NodeJs driver is how our backend will communicate with our Mongo database.
+
+* [MongoDB Driver](http://mongodb.github.io/node-mongodb-native/2.2/tutorials/main/)
+  * [Connecting to Mongo](http://mongodb.github.io/node-mongodb-native/2.2/tutorials/connect/)
+  * [CRUD Operations](http://mongodb.github.io/node-mongodb-native/2.2/tutorials/crud/)
+
+## Installation
+
+### Required Software
 
 Install any of the listed software below if you haven't already.
 
@@ -12,7 +37,7 @@ Install any of the listed software below if you haven't already.
 * [Node v6.11.3 LTS](https://nodejs.org/en/)
 * [MongoDB v3.4](https://www.mongodb.com/download-center#community)
 
-## MongoDB Setup
+### MongoDB Setup
 
 After the required software is installed, open a command prompt and create the folders data\db in your C Drive
 
@@ -42,7 +67,7 @@ That's it! The database is set up and ready to go.
 
 **Be sure to keep the mongod server up while using the website!**
 
-## Backend Setup
+### Backend Setup
 
 After you have setup MongoDB, open a command prompt and clone this repository
 
@@ -73,4 +98,4 @@ If you see
 
 Then code was compiled correctly and our backend is up and running!
 
-## Now you can head over to our [frontend repository](https://github.com/scott-rc/GolfStarter-frontend) and install it
+### Now you can head over to our [frontend repository](https://github.com/scott-rc/GolfStarter-frontend) and install it
