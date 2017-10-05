@@ -12,6 +12,12 @@ Express is the framework we are using for our backend server. It handles HTTP re
   * [Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
   * [Error Handling](http://expressjs.com/en/guide/error-handling.html)
 
+### ES6 (JavaScript)
+
+ES stands for ECMAScript and is the specification for JavaScript. ES6 is one of the latest specifications that brings a lot of new features into JavaScript. We are going to be using a lot of these new features.
+
+[ES6 (Javascript)](https://github.com/DrkSephy/es6-cheatsheet)
+
 ### JSON
 
 JSON is the format that we use to send and receive messages from our frontend.
