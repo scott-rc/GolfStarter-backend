@@ -165,3 +165,5 @@ Temporary Items
 .history
 
 # End of https://www.gitignore.io/api/osx,node,intellij,visualstudiocode
+.vscode/launch.json
+.vscode/settings.json
