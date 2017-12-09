@@ -12,7 +12,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --colors --hide-modules",
     "start:dev": "nodemon -w ./build build/golfstarters-server.js",
     "build:dev": "cross-env NODE_ENV=development webpack --progress --colors -w",
-    "predev": "cross-env NODE_ENV=development webpack --progress --colors",
     "dev": "concurrently \"npm run build:dev\"  \"npm run start:dev\""
   },
   "author": "Scott",

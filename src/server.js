@@ -27,12 +27,12 @@ const INVALID_TOKEN = { msg: 'Invalid token', code: 600 };
 const WRONG_PASSWORD = { msg: 'Incorrect password', code: 500 };
 const INVALID_PASSWORD = { msg: 'Invalid password', code: 300 };
 const NO_USER = { msg: 'Couldn\'t find user with that username', code: 200 };
+const USER_ALREADY_EXISTS = { msg: 'User already exists with that username', code: 900 };
 
-const app = express();
-const server = http.createServer(app);
-const port = process.env.PORT || 3000;
 const MongoClient = mongodb.MongoClient;
 const ObjectID = mongodb.ObjectID;
+
+const app = express();
 
 app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:8080', optionsSuccessStatus: 200 }));
@@ -179,6 +179,11 @@ app.get('/login', async (req, res) => {
 app.post('/api/admin/create-user', async (req, res) => {
   const user = req.body;
   const userCollection = req.collections.users;
+
+  if (await userCollection.findOne({ username: user.username })) {
+    return res.status(UNPROCESSABLE_ENTITY).json(USER_ALREADY_EXISTS);
+  }
+
   const password = pwdGenerator.generate();
 
   const hashedUser = {
@@ -210,4 +215,4 @@ app.post('/api/admin/delete-user', async (req, res) => {
   res.json();
 });
 
-server.listen(port);
+http.createServer(app).listen(process.env.PORT || 3000);
