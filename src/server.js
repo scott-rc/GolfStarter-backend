@@ -33,6 +33,7 @@ const MongoClient = mongodb.MongoClient;
 const ObjectID = mongodb.ObjectID;
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors({ origin: 'http://localhost:8080', optionsSuccessStatus: 200 }));
@@ -215,4 +216,6 @@ app.post('/api/admin/delete-user', async (req, res) => {
   res.json();
 });
 
-http.createServer(app).listen(process.env.PORT || 3000);
+http.createServer(app).listen(port, () => {
+  console.log(`Listening for requests on port ${port}`);
+});
